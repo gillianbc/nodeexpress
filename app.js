@@ -9,7 +9,7 @@ const path = require('path');
 
 //HTTP request logger middleware for node.js
 //Launch localhost:3000 to see this
-app.use(morgan('combined'));
+app.use(morgan('tiny'));
 //Use my local static files in public or if not, look in node_modules
 app.use('/css',express.static(path.join(__dirname,'/public')));
 app.use('/css',express.static(path.join(__dirname,'/node_modules/bootstrap/dist/css')));
