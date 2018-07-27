@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
-    "open:src": "babel-node src/app.js",
+    "open:src": "babel-node app.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
@@ -16,6 +16,8 @@
   "author": "Gillian BC",
   "license": "ISC",
   "dependencies": {
+    "debug": "3.1.0",
+    "morgan": "1.9.0",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
