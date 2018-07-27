@@ -1,5 +1,5 @@
 const express = require('express');
-import chalk from 'chalk';
+const chalk = require('chalk');
 const app = express();
 const log = console.log;
 //or, so that we don't do console logging
