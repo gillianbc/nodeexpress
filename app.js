@@ -10,7 +10,12 @@ const path = require('path');
 //HTTP request logger middleware for node.js
 //Launch localhost:3000 to see this
 app.use(morgan('combined'));
-
+//Use my local static files in public or if not, look in node_modules
+app.use('/css',express.static(path.join(__dirname,'/public')));
+app.use('/css',express.static(path.join(__dirname,'/node_modules/bootstrap/dist/css')));
+app.use('/js',express.static(path.join(__dirname,'/node_modules/bootstrap/dist/js')));
+app.use('/js',express.static(path.join(__dirname,'/node_modules/jquery/dist')));
+app.use('/js',express.static(path.join(__dirname,'/node_modules/popper.js/dist')));
 app.get('/', function(req, res){
     // res.send('Hello from my app');
   //Use path.join to build the url - it takes care of slashes and works out whether they need to be unix or windows slashes
