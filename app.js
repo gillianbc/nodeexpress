@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
+const port = process.env.PORT || 3000;
 // const log = console.log;
 
 // HTTP request logger middleware for node.js
@@ -28,5 +29,5 @@ app.listen(3000, () => {
   // log(chalk.green('listening on ') + chalk.red('port 3000'));
   // Note the back quotes - don't prefer this syntax actually
   // log(`Just repeating myself - listening on port ${chalk.green('3000')}`);
-  debug(`Debug - Just repeating myself - listening on port ${chalk.green('3000')}`);
+  debug(`Debug - Just repeating myself a bit more - listening on port ${chalk.green(port)}`);
 });
