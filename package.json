@@ -25,6 +25,7 @@
     "morgan": "1.9.0",
     "nodemon": "1.18.3",
     "popper.js": "1.14.3",
+    "pug": "2.0.3",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {

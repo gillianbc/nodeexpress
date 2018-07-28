@@ -17,12 +17,18 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/popper.js/dist')));
+// Templating engine
+app.set('views', './src/views');
+app.set('view engine' ,'pug');
+
+
 app.get('/', (req, res) => {
   // res.send('Hello from my app');
   // Use path.join to build the url - it takes care of slashes and works out whether they need
   // to be unix or windows slashes
   // res.sendFile(path.join(__dirname,'views','index.html'));  //This works too
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  // res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.render('index');
 });
 
 app.listen(3000, () => {
