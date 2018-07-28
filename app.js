@@ -19,7 +19,7 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist'))
 app.use('/js', express.static(path.join(__dirname, '/node_modules/popper.js/dist')));
 // Templating engine
 app.set('views', './src/views');
-app.set('view engine' ,'pug');
+app.set('view engine' ,'ejs');
 
 
 app.get('/', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   // to be unix or windows slashes
   // res.sendFile(path.join(__dirname,'views','index.html'));  //This works too
   // res.sendFile(path.join(__dirname, 'views/index.html'));
-  res.render('index',{mylist: ['a','b']});
+  res.render('index2',{title: 'This is my page', mylist: ['a','b']});
 });
 
 app.listen(3000, () => {
