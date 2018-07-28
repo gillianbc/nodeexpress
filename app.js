@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   // to be unix or windows slashes
   // res.sendFile(path.join(__dirname,'views','index.html'));  //This works too
   // res.sendFile(path.join(__dirname, 'views/index.html'));
-  res.render('index');
+  res.render('index',{mystring: 'This is my string'});
 });
 
 app.listen(3000, () => {
