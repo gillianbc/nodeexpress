@@ -4,4 +4,7 @@ html
   body(class=["myclass"])
     h1 My Application
     p
-      h3(id="myId")= mystring
+      h3(id="myId") Heading Three
+    ul
+      each val in mylist
+        li=val
